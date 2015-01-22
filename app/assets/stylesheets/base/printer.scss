@@ -1,0 +1,29 @@
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  .print-hide {
+    display: none !important;
+  }
+
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    hyphens: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .text {
+    max-width: 95% !important;
+  }
+
+  article,
+  .document {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 16px !important;
+  }
+}

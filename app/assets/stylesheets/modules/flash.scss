@@ -1,0 +1,32 @@
+.flash {
+  @extend %box;
+  @extend .col-6;
+  border-left: 2px solid $blue;
+  color: $grey;
+  margin: $padding-base auto;
+  padding: 16px;
+}
+
+.flash-success {
+  border-left-color: $green;
+}
+
+.flash-info {
+  border-left-color: $yellow;
+}
+
+.flash-danger {
+  border-left-color: $red;
+}
+
+@media (max-width: $screen-phone) {
+  .flash {
+    width: 80%;
+  }
+}
+
+@media print {
+  .flash {
+    display: none !important;
+  }
+}

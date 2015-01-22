@@ -1,0 +1,56 @@
+label,
+input {
+  @extend .text;
+  display: block;
+  outline: 0;
+}
+
+input[type="checkbox"], input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+.text-input {
+  @extend .text;
+  @extend %rounded;
+  -webkit-appearance: none;
+  border: $border;
+  color: $grey;
+  margin-bottom: 8px;
+  outline: 0;
+  padding: 4px 8px;
+  width: 16em;
+
+  &:focus {
+    @extend %elegance;
+    border-color: $blue;
+    color: $black;
+  }
+
+  &.notes:focus {
+    border-color: $grey-lighter;
+  }
+}
+
+textarea.text-input {
+  line-height: 1.66;
+  width: 32em;
+
+  &.js-auto-size {
+    resize: none;
+  }
+}
+
+@media (max-width: $screen-phone) {
+  .text-input {
+    width: 95% !important;
+  }
+}
+
+.radio label {
+  line-height: 1.42;
+  text-transform: none;
+}
+
+.field_with_errors .text-input {
+  border-color: $red;
+}

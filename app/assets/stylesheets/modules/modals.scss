@@ -1,0 +1,36 @@
+#lean_overlay {
+  @extend .hide;
+  background: #000;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.modal {
+  @extend %rounded;
+  @extend .hide;
+  @extend %bg-white;
+  display: none;
+  left: 25%;
+  padding: 15px;
+  position: fixed;
+  width: 560px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.modal-close svg {
+  @include svg-small($grey-light);
+}
+
+@media (max-width: $screen-phone) {
+  .modal {
+    box-sizing: border-box;
+    max-width: 95% !important;
+    top: 2rem !important;
+  }
+}

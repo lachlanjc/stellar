@@ -1,0 +1,33 @@
+.search-form {
+  label {
+    @extend .ib;
+
+    svg {
+      @include svg-small($grey-light)
+    }
+  }
+
+  .text-input {
+    @extend .ib;
+    @include up(-7px);
+  }
+}
+
+.invisble-input {
+  background: transparent;
+  border: 0;
+  resize: none;
+  padding: 0;
+}
+
+@media (max-width: $screen-phone) {
+  .search-form .text-input {
+    width: 14rem !important;
+  }
+}
+
+@media print {
+  .search-form {
+    display: none;
+  }
+}

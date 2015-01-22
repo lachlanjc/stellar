@@ -1,0 +1,32 @@
+.tabs-container {
+  input {
+    display: none;
+  }
+
+  label {
+    background-color: $grey-lighter;
+    border: $border;
+    border-bottom: 0;
+    border-radius: $radius $radius 0 0;
+    display: inline-block;
+    padding: 6px $padding-small;
+  }
+
+  .content {
+    border-radius: 0 $radius $radius;
+    border: $border;
+    display: none;
+    padding: $padding-small;
+  }
+
+  input:checked + label {
+    background-color: #fff;
+    font-weight: 600;
+  }
+
+  #tab-1:checked ~ .content-1,
+  #tab-2:checked ~ .content-2,
+  #tab-3:checked ~ .content-3 {
+    display: block;
+  }
+}

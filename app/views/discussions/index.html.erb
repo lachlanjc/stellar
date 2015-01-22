@@ -1,0 +1,17 @@
+<h1 class="ib">Discussions</h1>
+
+<%= link_to "New Discussion", new_discussion_path, class: "btn-green float-right ib" %>
+
+<% @discussions.each do |discussion| %>
+  <%= link_to discussion do %>
+    <div class="panel panel-body">
+      <div class="pinned-large">
+        <%= inline_svg("pin.svg") %>
+      </div>
+      <div>
+        <h2><%= discussion.title %></h2>
+        <p class="m0 text-muted"><%= pluralize(discussion.comments.count, "comment") %> <%= " | Pinned" if discussion.pinned? %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>

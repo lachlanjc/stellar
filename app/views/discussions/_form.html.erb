@@ -1,0 +1,25 @@
+<%= form_for(@discussion) do |f| %>
+  <% if @discussion.errors.any? %>
+  <div class="panel">
+    <h2><%= pluralize(@discussion.errors.count, "error") %> prohibited this discussion from being saved:</h2>
+    <ul>
+      <% @discussion.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'text-input' %>
+
+  <div>
+    <%= f.check_box :pinned %>
+    <%= f.label :pinned, 'Pinned' %>
+  </div>
+
+  <br>
+
+  <%= f.submit class: 'btn' %>
+
+<% end %>

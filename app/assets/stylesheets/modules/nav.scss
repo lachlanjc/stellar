@@ -1,0 +1,43 @@
+.nav {
+  @extend .flex-between;
+  @extend .flex;
+  background-color: $grey-lighter;
+  border-bottom: 1px solid $grey-light;
+  margin-bottom: 20px;
+  padding: 16px 10px;
+}
+
+.nav-side {
+  @extend .ib;
+}
+
+.nav-link {
+  font-size: $size-body;
+  font-weight: 600;
+  margin: 0 8px;
+
+  &:hover {
+    color: lighten($brand-primary, 8%);
+    text-decoration: none;
+  }
+
+  &.active {
+    border-bottom: 2px solid $brand-primary;
+  }
+}
+
+@media (max-width: $screen-phone) {
+  .nav {
+    display: block;
+  }
+
+  .nav-side:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media print {
+  .nav {
+    display: none;
+  }
+}

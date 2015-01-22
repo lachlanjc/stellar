@@ -1,0 +1,116 @@
+%btn-primary-bg {
+  background: $brand-primary $gradient-darken;
+}
+
+.btn {
+  @extend %btn-primary-bg;
+  @extend %pointer;
+  @extend %rounded;
+  @include elegance;
+  -webkit-appearance: none;
+  border: 0;
+  color: #fff;
+  font: $size-h3 $font-base;
+  outline: 0;
+  padding: 8px 16px;
+  -webkit-tap-highlight-color: rgba(#000, .12);
+  text-shadow: 0 1px rgba(0, 0, 0, .04);
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.btn[disabled] {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: .65;
+  pointer-events: none;
+}
+
+@media print {
+  .btn {
+    border: 1px solid #ccc;
+  }
+
+  .btn-paper {
+    display: none;
+  }
+}
+
+.btn-green {
+  @include button-standard($green);
+}
+
+.btn-red {
+  @include button-standard($red);
+}
+
+.btn-sm {
+  box-shadow: none;
+  font-size: $size-h5;
+  padding: 5px 10px;
+
+  &.in-text {
+    margin: 2px 4px;
+  }
+}
+
+.btn-lg {
+  @extend .btn;
+  font-size: $size-h2;
+  padding: 10px 20px;
+}
+
+%fab {
+  @extend %btn-primary-bg;
+  @extend %elegance;
+  @include shadow-3;
+  border-radius: 50%;
+  position: fixed;
+  -webkit-user-select: none;
+  z-index: 20;
+
+  &:hover {
+    @include shadow-3;
+  }
+
+  &:active,
+  &:focus {
+    @include shadow-4;
+  }
+
+  svg {
+    @include size(30px);
+    fill: #fff;
+    position: absolute;
+  }
+}
+
+.btn-paper {
+  @extend %fab;
+  @include size(46px);
+  bottom: $padding-base;
+  padding: 8px;
+  right: $padding-base;
+
+  svg {
+    left: 16px;
+    top: 16px;
+  }
+}
+
+.btn-paper-mini {
+  @extend %fab;
+  @include size(30px);
+  bottom: 90px;
+  padding: 6px;
+  right: 27px;
+
+  svg {
+    @include size(30px);
+    left: 6px;
+    top: 5px;
+  }
+}
