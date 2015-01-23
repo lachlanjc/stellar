@@ -14,14 +14,14 @@ img {
 }
 
 %box {
-  @extend %bg-white;
-  @extend %rounded;
+  background-color: #fff;
   border: $border;
+  border-radius: $radius;
 }
 
 .document {
-  @extend %box;
   @extend .center;
+  box-sizing: border-box;
   padding: 24px;
 }
 

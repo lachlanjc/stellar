@@ -1,28 +1,26 @@
 .nav {
   @extend .flex-between;
   @extend .flex;
-  background-color: $grey-lighter;
-  border-bottom: 1px solid $grey-light;
+  background-color: $brand-primary;
   margin-bottom: 20px;
   padding: 16px 10px;
 }
 
 .nav-side {
-  @extend .ib;
+  display: inline-block;
 }
 
 .nav-link {
+  color: #fff;
   font-size: $size-body;
-  font-weight: 600;
   margin: 0 8px;
 
   &:hover {
-    color: lighten($brand-primary, 8%);
     text-decoration: none;
   }
 
   &.active {
-    border-bottom: 2px solid $brand-primary;
+    font-weight: 700;
   }
 }
 

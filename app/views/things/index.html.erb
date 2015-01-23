@@ -1,0 +1,24 @@
+<h1>Things</h1>
+
+<%= render partial: "thing", collection: @things, cache: true %>
+
+<div id="newThingModal" role="dialog" class="modal">
+  <a class="modal-close float-right" href="#">
+    <%= inline_svg("close.svg") %>
+  </a>
+  <h2>Add a Thing</h2>
+  <hr>
+  <%= form_for(Thing.new) do |f| %>
+    <%= f.text_field :name, class: "text-input", placeholder: "Name the Thing" %>
+    <div>
+      <%= f.check_box :pinned %>
+      <%= f.label :pinned, "Pinned" %>
+    </div>
+    <br>
+    <%= f.submit class: "btn float-right" %>
+  <% end %>
+</div>
+
+<%= link_to new_thing_path, class: "btn-paper", id: "newThingTrigger", name: "newThingModal", href: "#newThingModal" do %>
+  <%= inline_svg("add.svg") %>
+<% end %>

@@ -6,14 +6,6 @@
   cursor: pointer;
 }
 
-%rounded {
-  border-radius: $radius;
-}
-
-%bg-white {
-  background: #fff;
-}
-
 .block {
   display: block !important;
 }
@@ -36,11 +28,11 @@
 }
 
 .m1 {
-  margin: 1rrem;
+  margin: 1rem;
 }
 
 .m2 {
-  margin: 2rrem;
+  margin: 2rem;
 }
 
 .m-small-left {

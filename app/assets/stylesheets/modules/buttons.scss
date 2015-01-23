@@ -1,14 +1,15 @@
 %btn-primary-bg {
-  background: $brand-primary $gradient-darken;
+  background-color: $brand-primary;
+  @include background-image(linear-gradient(transparent, rgba(0, 0, 0, .06)));
 }
 
 .btn {
   @extend %btn-primary-bg;
   @extend %pointer;
-  @extend %rounded;
   @include elegance;
   -webkit-appearance: none;
   border: 0;
+  border-radius: $radius;
   color: #fff;
   font: $size-h3 $font-base;
   outline: 0;

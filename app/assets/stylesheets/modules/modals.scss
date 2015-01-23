@@ -9,9 +9,9 @@
 }
 
 .modal {
-  @extend %rounded;
   @extend .hide;
-  @extend %bg-white;
+  background: #fff;
+  border-radius: $radius;
   display: none;
   left: 25%;
   padding: 15px;
@@ -24,7 +24,7 @@
 }
 
 .modal-close svg {
-  @include svg-small($grey-light);
+  fill: $grey-light;
 }
 
 @media (max-width: $screen-phone) {
