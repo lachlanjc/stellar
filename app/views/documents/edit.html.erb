@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "documents" %>
+<%= javascript_include_tag "documents" %>
+
+<%= form_for(@document, remote: true, html: { id: "documentEditor" }) do |f| %>
+  <%= f.text_area :content, class: "text-input full-width invisible-input text-dark js-auto-size", placeholder: "Start writing! Markdown supported." %>
+<% end %>
+
+<div id="editInfoModal" role="dialog" class="modal">
+  <a class="modal-close float-right" href="#">
+    <%= inline_svg("close.svg") %>
+  </a>
+  <h2>Name Your Document</h2>
+  <hr>
+  <%= form_for(@document) do |f| %>
+  <%= f.text_field :name, class: "text-input", placeholder: "Name the Document" %>
+  <%= f.submit "Save", class: "btn float-right" %>
+  <% end %>
+</div>
+
+<a class="btn-paper-mini" id="editInfoTrigger" name="editInfoModal" href="#editInfoModal">
+  <%= inline_svg("info_outline.svg") %>
+</a>
+<%= link_to document_path(@document.id), class: "btn-paper" do %>
+  <%= inline_svg("check.svg") %>
+<% end %>

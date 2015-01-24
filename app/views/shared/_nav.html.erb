@@ -2,6 +2,7 @@
   <div>
     <%= link_to "Home", root_url, class: "nav-link" %>
     <%= link_to "Things", things_path, class: "nav-link" + nav_active_class(:things) %>
+    <%= link_to "Documents", documents_path, class: "nav-link" + nav_active_class(:docs) %>
   </div>
   <div></div>
 </nav>

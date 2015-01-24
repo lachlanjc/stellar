@@ -1,8 +1,10 @@
 <%= link_to thing do %>
 <div class="panel panel-body">
+  <% if thing.pinned? %>
   <div class="pinned-large">
     <%= inline_svg("pin.svg") %>
   </div>
+  <% end %>
   <div>
     <h2><%= thing.name %></h2>
     <p class="m0 text-muted"><%= pluralize(thing.comments.count, "comment") %> <%= " | Pinned" if thing.pinned? %></p>
