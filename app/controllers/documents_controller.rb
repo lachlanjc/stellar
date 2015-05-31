@@ -39,6 +39,10 @@ class DocumentsController < ApplicationController
     @document.update(document_params)
     @document.content_html = markdown(@document.content)
     @document.save
+    # Prevent *gigantic* log files
+    if Rails.env.development?
+      system "echo '' > log/development.log"
+    end
     render :edit
   end
 
