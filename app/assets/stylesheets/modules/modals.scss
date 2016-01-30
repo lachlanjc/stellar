@@ -23,8 +23,10 @@
   }
 }
 
-.modal-close svg {
+.modal__close {
+  display: block;
   fill: $grey-light;
+  float: right;
 }
 
 @media (max-width: $screen-phone) {

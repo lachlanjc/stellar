@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150123214926) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.string   "commenter"
     t.text     "body"
     t.integer  "thing_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150123214926) do
 
   add_index "comments", ["thing_id"], name: "index_comments_on_thing_id", using: :btree
 
-  create_table "documents", force: true do |t|
+  create_table "documents", force: :cascade do |t|
     t.string   "name"
     t.text     "content"
     t.text     "content_html"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150123214926) do
     t.datetime "updated_at"
   end
 
-  create_table "things", force: true do |t|
+  create_table "things", force: :cascade do |t|
     t.string   "name"
     t.boolean  "pinned"
     t.boolean  "closed"

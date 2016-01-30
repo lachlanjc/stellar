@@ -1,13 +1,16 @@
-<div class="panel">
-  <div class="panel-header">
-    <p><strong><%= comment.commenter %></strong> on <%= comment.created_at.strftime("%B %-d, %Y") %></p>
+<section class="panel">
+  <header class="panel-header">
+    <p>
+      <strong><%= comment.commenter %></strong>
+      on <%= comment.created_at.strftime("%B %-d, %Y") %>
+    </p>
     <small>
-      <%= link_to [comment.thing, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "delete" do %>
-        <%= inline_svg("close.svg") %>
+      <%= link_to [comment.thing, comment], method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete' do %>
+        <%= inline_svg 'close.svg' %>
       <% end %>
     </small>
-  </div>
-  <div class="panel-body text">
+  </header>
+  <article class="panel-body text">
     <%= markdown(comment.body).html_safe %>
-  </div>
-</div>
+  </article>
+</section>

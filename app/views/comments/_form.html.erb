@@ -1,5 +1,5 @@
 <%= form_for([@thing, @thing.comments.build]) do |f| %>
-  <%= f.hidden_field :commenter, class: "text-input", value: "You" %>
-  <%= f.text_area :body, class: "text-input", placeholder: "Say something awesome (Markdown supported).", rows: 4 %>
-  <%= f.submit "Post", class: "btn" %>
+  <%= f.hidden_field :commenter, class: 'text-input', value: 'You' %>
+  <%= f.text_area :body, class: 'text-input', placeholder: 'Say something awesome (Markdown supported).', rows: 4 %>
+  <%= f.submit 'Post', class: 'btn' %>
 <% end %>

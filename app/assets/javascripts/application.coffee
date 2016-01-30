@@ -5,4 +5,4 @@
 #= require turbolinks
 
 $(document).ready ->
-  $("#newThingTrigger").leanModal()
+  $('[data-behavior~=modal_trigger]').leanModal()

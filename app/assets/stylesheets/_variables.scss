@@ -20,25 +20,25 @@ $elegance-transition:    .28s cubic-bezier(.4, 0, .2, 1);
 
 $font-base:              "Source Code Pro", "Helvetica Neue", Helvetica, sans-serif;
 
-$size-h1:                30px;
-$size-h2:                21px;
-$size-h3:                16px;
-$size-h4:                14px;
-$size-h5:                12px;
-$size-h6:                11px;
+$size-h1:                2rem;
+$size-h2:                1.5rem;
+$size-h3:                1.25rem;
+$size-h4:                1rem;
+$size-h5:                .875rem;
+$size-h6:                .5rem;
 
 $size-body:              $size-h3;
 
 $line-height:            1.6;
-$spacing:                .03rem;
+$spacing:                .03em;
 
 
 // Padding
 
-$padding-xs:             8px;
-$padding-small:          12px;
-$padding-base:           16px;
-$padding-large:          24px;
+$padding-xs:             .25rem;
+$padding-small:          .5rem;
+$padding-base:           1rem;
+$padding-large:          2rem;
 
 $radius:                 6px;
 

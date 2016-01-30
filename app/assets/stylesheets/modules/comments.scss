@@ -1,11 +1,11 @@
-.pinned-large svg {
+.pinned-large {
   @extend .float-left;
   @include svg-large($grey);
   margin-top: 3px;
   margin-right: 10px;
 }
 
-.delete svg {
+.delete {
   @include size(18px);
   @include up(4px);
   fill: $grey;

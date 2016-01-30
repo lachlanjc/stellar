@@ -1,12 +1,8 @@
-<%= link_to document, class: "link-reset" do %>
-<div class="panel">
-  <% unless document.name.blank? %>
-  <div class="panel-header">
-    <p><strong><%= document.name %></strong></p>
-  </div>
-  <% end %>
-  <div class="panel-body">
-    <p class="m0 text-muted"><%= document.content_html.to_s.truncate(140).html_safe %></p>
-  </div>
-</div>
+<%= link_to document, class: 'link-reset' do %>
+  <section class="panel">
+    <%= content_tag :header, content_tag(:strong, document.name), class: 'panel-header' if document.name.present? %>
+    <article class="panel-body">
+      <p class="m0 text-muted"><%= document.content_html.to_s.truncate(140).html_safe %></p>
+    </article>
+  </section>
 <% end %>

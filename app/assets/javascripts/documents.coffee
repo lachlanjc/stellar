@@ -1,7 +1,6 @@
 #= require autosize
 
 $(document).ready ->
-  $(".js-auto-size").autosize()
-  $("#editInfoTrigger").leanModal()
-  $("#document_content").keyup ->
-    $("#documentEditor").submit()
+  $('[data-behavior~=auto_size]').autosize()
+  $('[data-behavior~=document_editor_content]').keyup ->
+    $('[data-behavior~=document_editor_content]').submit()
